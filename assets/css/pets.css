@@ -1,0 +1,446 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgia.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Italic"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgiai.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgiab.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold Italic"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgiaz.woff") format("woff");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia";
+}
+
+.wrapper {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 1 1 auto;
+  margin: 30px 0 30px 0;
+  color: #545454;
+  cursor: pointer;
+}
+.logo__title {
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+}
+.logo__subtitle {
+  padding: 10px 0 0 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  flex: 0 1 443px;
+}
+.nav__menu-btn {
+  display: none;
+}
+.nav__menu {
+  margin: 47px 4px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  transition: all 500ms;
+}
+.nav__link a {
+  color: #545454;
+  font-family: "Arial";
+  line-height: 160%;
+  transition: all 1000ms;
+}
+.nav__link:nth-child(2) {
+  position: relative;
+  pointer-events: none;
+}
+.nav__link:nth-child(2) a {
+  color: #545454;
+}
+.nav__link:nth-child(2)::after {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  content: " ";
+  width: 58px;
+  height: 3px;
+  background: #F1CDB3;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  justify-items: center;
+  padding: 0 0px;
+  grid-gap: 30px 40px;
+}
+
+main {
+  background: #F6F6F6;
+  padding-bottom: 40px;
+}
+
+h1 {
+  font-family: "Georgia";
+  display: block;
+  margin: 0 auto;
+  padding: 81px 0 58px 0;
+  max-width: 400px;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  text-align: center;
+}
+
+.pets__cart {
+  padding-bottom: 30px;
+  background: #FAFAFA;
+  border-radius: 9px;
+  transition: all 1000ms;
+}
+.pets__cart-image img {
+  width: 100%;
+}
+.pets__cart-text {
+  padding: 30px 0;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.pets__cart-button {
+  background: #FAFAFA;
+  display: block;
+  max-width: 187px;
+  width: 100%;
+  height: 52px;
+  margin: 0 auto;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition: all 1000ms;
+}
+.pets__nav {
+  margin: 0 auto;
+}
+.pets__nav ul {
+  display: flex;
+  justify-content: center;
+}
+.pets__link {
+  width: 52px;
+  height: 52px;
+  margin: 60px 10px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  transition: all 500ms;
+}
+.pets__link p {
+  margin: 12px 0 0 19px;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.pets__link:nth-child(1) p {
+  margin: 12px 0 0 9px;
+  letter-spacing: 0;
+}
+.pets__link:nth-child(3) {
+  background: #F1CDB3;
+}
+.pets__link:nth-child(5) p {
+  margin: 12px 0 0 11px;
+  letter-spacing: 0;
+}
+.pets__link.block {
+  pointer-events: none;
+  cursor: default;
+  border: 2px solid #CDCDCD;
+}
+.pets__link.block p {
+  color: #CDCDCD;
+}
+
+footer {
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer__flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__content {
+  padding-bottom: 60px;
+}
+.footer__content:nth-child(1) {
+  flex: 0 1 280px;
+}
+.footer__content:nth-child(1) .footer__content-link:nth-child(2) {
+  padding: 44px 0 0 60px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/icon-email.svg") 0px 39px/40px 32px no-repeat;
+}
+.footer__content:nth-child(1) .footer__content-link:nth-child(3) {
+  padding: 48px 0 5px 60px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/icon-phone.svg") 0px 44px/40px 32px no-repeat;
+}
+.footer__content:nth-child(2) {
+  flex: 0 1 302px;
+}
+.footer__content:nth-child(2) .footer__content-link:nth-child(2) {
+  padding: 33px 0 0 40px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/pin.svg") 0px 39px/22px 32px no-repeat;
+}
+.footer__content:nth-child(2) .footer__content-link:nth-child(3) {
+  padding: 38px 0 3px 40px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/pin.svg") 0px 32px/22px 32px no-repeat;
+}
+.footer__content-title {
+  padding: 56px 0 0 0;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+.footer__content-link {
+  display: block;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+  transition: all 500ms;
+}
+.footer__image {
+  align-self: flex-end;
+}
+
+.pop-up.active {
+  display: flex;
+}
+
+.pop-up {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.377);
+}
+.pop-up__wrapper {
+  position: relative;
+  max-width: 900px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #FAFAFA;
+}
+.pop-up__image {
+  flex: 0 1 480px;
+}
+.pop-up__img {
+  width: 100%;
+}
+.pop-up__content {
+  flex: 0 1 351px;
+}
+.pop-up__name {
+  padding: 50px 0 10px;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+.pop-up__type {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+.pop-up__desription {
+  padding: 40px 0;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.pop-up__list {
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.pop-up__list span {
+  font-weight: 600;
+}
+.pop-up__close {
+  position: absolute;
+  display: block;
+  padding: 1px 0 0 11px;
+  top: -50px;
+  right: -50px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.pop-up__close:hover {
+  cursor: pointer;
+  transform: scale(1.1) rotate(45deg);
+  transition: all 0.5s;
+}
+
+@media (min-width: 820px) {
+  .nav__link:hover {
+    transform: scale(1.1);
+    transition: all 500ms;
+  }
+  .nav__link:hover a {
+    color: #292929;
+    transition: all 1000ms;
+  }
+  .pets__cart button:hover {
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+  .pets__cart:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(111, 111, 112, 0.6039215686);
+    transition: all 1000ms;
+  }
+  .pets__cart:hover button {
+    background: #FDDCC4;
+    transition: all 1000ms;
+  }
+  .pets__button:hover {
+    background: #FDDCC4;
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+  .pets__link:hover {
+    background: #F1CDB3;
+    transform: scale(1.1);
+    transition: all 500ms;
+  }
+  .footer__content-link:hover {
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+}

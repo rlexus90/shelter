@@ -1,0 +1,638 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgia.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Italic"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgiai.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgiab.woff") format("woff");
+}
+@font-face {
+  font-family: "Georgia Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold Italic"), url("//rlexus90-JSFE2023Q1/shelter/assets/font/georgiaz.woff") format("woff");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100vw;
+  font-size: 15px;
+  font-family: Georgia, serif;
+}
+
+.startscreen-wrapper {
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 30px 0 0 0;
+}
+.logo__title {
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+.logo__subtitle {
+  padding: 10px 0 0 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  flex: 0 1 443px;
+}
+.nav__menu-btn {
+  display: none;
+}
+.nav__menu {
+  margin: 45px 2px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  transition: all 500ms;
+}
+.nav__link a {
+  color: #CDCDCD;
+  font-family: "Arial";
+  line-height: 160%;
+  transition: all 1000ms;
+}
+.nav__link:first-child {
+  position: relative;
+  pointer-events: none;
+}
+.nav__link:first-child a {
+  color: #FAFAFA;
+}
+.nav__link:first-child::after {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  content: " ";
+  width: 114px;
+  height: 3px;
+  background: #F1CDB3;
+}
+
+.startscreen__flex-container {
+  padding: 90px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.startscreen__content {
+  flex: 0 1 460px;
+  padding: 13.6% 0 0 0;
+}
+.startscreen__title {
+  max-width: 310px;
+  font-size: 44px;
+  line-height: 57px;
+}
+.startscreen__text {
+  padding: 42px 0;
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+}
+.startscreen__button {
+  width: 207px;
+  height: 52px;
+  background: #F1CDB3;
+  border-radius: 100px;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition: all 1000ms;
+}
+.puppy {
+  width: 100%;
+}
+
+.about__flex-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 80px 0 89px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.about__image {
+  flex: 0 1 300px;
+}
+.about__content {
+  flex: 0 1 430px;
+}
+.about__title {
+  max-width: 370px;
+  padding: 14px 0 25px 0;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.about__text {
+  font-family: "Arial";
+  line-height: 160%;
+  color: #4C4C4C;
+}
+.about__text p {
+  padding: 0 0 25px 0;
+}
+
+.pets {
+  background: #F6F6F6;
+  color: #545454;
+  padding-bottom: 100px;
+}
+.pets__title {
+  margin: 0 auto;
+  padding: 80px 0 60px 0;
+  max-width: 400px;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+.pets__content {
+  display: flex;
+}
+.pets__arrow {
+  margin: 192px 0 0 0;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/Arrow.svg") 17px 21px/14px 6px no-repeat;
+  transition: all 500ms;
+}
+.pets__grid-container {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  justify-items: center;
+  padding: 0 34px;
+  grid-gap: 10px 50px;
+}
+.pets__cart {
+  background: #FAFAFA;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  transition: all 1000ms;
+}
+.pets__cart button {
+  background: #FAFAFA;
+  transition: all 1000ms;
+}
+.pets__cart-image img {
+  width: 100%;
+}
+.pets__cart-text {
+  padding: 30px 0;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+.pets__cart-button {
+  display: block;
+  max-width: 187px;
+  width: 100%;
+  height: 52px;
+  margin: 0 auto;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition: all 1000ms;
+}
+.pets__button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 59px;
+  width: 261px;
+  height: 52px;
+  background: #F1CDB3;
+  border-radius: 100px;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #292929;
+  transition: all 1000ms;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}
+
+.help {
+  padding-bottom: 100px;
+}
+.help__title {
+  max-width: 310px;
+  margin: 0 auto;
+  padding: 80px 0 3px 0;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.help__content-first {
+  padding: 0 20px 0 12px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.help__content-first .help__list:nth-child(2) {
+  margin: 0 0 0 3px;
+}
+.help__content-first .help__list:nth-child(3) {
+  margin: 0 13px 0 0;
+}
+.help__content-first .help__list:nth-child(4) {
+  margin: 0 28px 0 0;
+}
+.help__content-second {
+  padding: 0 118px 0 90px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.help__content-second .help__list:nth-child(2) {
+  margin: 0 62px 0 0;
+}
+.help__content-second .help__list:nth-child(3) {
+  margin: 0 51px 0 0;
+}
+.help__list {
+  padding-top: 55px;
+}
+.help__list-image {
+  display: block;
+  margin: 0 auto;
+}
+.help__list-name {
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.donation {
+  background: #F6F6F6;
+  padding: 81px 0 100px 0;
+}
+.donation__flex-container {
+  max-width: 916px;
+  margin: 0 auto;
+  min-height: 282px;
+  display: flex;
+}
+.donation__dog {
+  flex: 0 1 auto;
+  padding-top: 10px;
+}
+.donation__dog img {
+  width: 100%;
+}
+.donation__content {
+  padding: 0px 0 0 30px;
+}
+.donation__title {
+  max-width: 300px;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation__text {
+  padding: 20px 0 19px 0;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.donation__button {
+  display: flex;
+  align-items: center;
+  max-width: 349px;
+  width: 100%;
+  height: 43px;
+  background: #F1CDB3;
+  border-radius: 9px;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  transition: all 1000ms;
+}
+.donation__button img {
+  display: block;
+  padding: 0 15px 0 15px;
+}
+.donation__subtext {
+  max-width: 380px;
+  padding-top: 20px;
+  font-family: "Arial";
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+
+footer {
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer__flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__content {
+  padding-bottom: 60px;
+}
+.footer__content:nth-child(1) {
+  flex: 0 1 280px;
+}
+.footer__content:nth-child(1) .footer__content-link:nth-child(2) {
+  padding: 44px 0 0 60px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/icon-email.svg") 0px 39px/40px 32px no-repeat;
+}
+.footer__content:nth-child(1) .footer__content-link:nth-child(3) {
+  padding: 48px 0 5px 60px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/icon-phone.svg") 0px 44px/40px 32px no-repeat;
+}
+.footer__content:nth-child(2) {
+  flex: 0 1 302px;
+}
+.footer__content:nth-child(2) .footer__content-link:nth-child(2) {
+  padding: 33px 0 0 40px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/pin.svg") 0px 39px/22px 32px no-repeat;
+}
+.footer__content:nth-child(2) .footer__content-link:nth-child(3) {
+  padding: 38px 0 3px 40px;
+  background: url("/rlexus90-JSFE2023Q1/shelter/assets/icons/pin.svg") 0px 32px/22px 32px no-repeat;
+}
+.footer__content-title {
+  padding: 56px 0 0 0;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+.footer__content-link {
+  display: block;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+  transition: all 1000ms;
+}
+.footer__image {
+  align-self: flex-end;
+}
+
+.pop-up.active {
+  display: flex;
+  transition: all 0.5s;
+}
+
+.pop-up {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.377);
+  transition: all 0.5s;
+}
+.pop-up__wrapper {
+  position: relative;
+  max-width: 900px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #FAFAFA;
+}
+.pop-up__image {
+  flex: 0 1 480px;
+}
+.pop-up__img {
+  width: 100%;
+}
+.pop-up__content {
+  flex: 0 1 351px;
+}
+.pop-up__name {
+  padding: 50px 0 10px;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+.pop-up__type {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+.pop-up__desription {
+  padding: 40px 0;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.pop-up__list {
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+.pop-up__list span {
+  font-weight: 600;
+}
+.pop-up__close {
+  position: absolute;
+  display: block;
+  padding: 1px 0 0 11px;
+  top: -50px;
+  right: -50px;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.pop-up__close:hover {
+  cursor: pointer;
+  transform: scale(1.1) rotate(45deg);
+  transition: all 0.5s;
+}
+
+@media (min-width: 820px) {
+  .nav__link:hover {
+    transform: scale(1.1);
+    transition: all 500ms;
+  }
+  .nav__link:hover a {
+    color: #FAFAFA;
+    transition: all 1000ms;
+  }
+  .startscreen__button:hover {
+    transform: scale(1.05);
+    background: #FDDCC4;
+    transition: all 500ms;
+  }
+  .arrow-left:hover {
+    transform: scale(1.1);
+    transition: all 500ms;
+  }
+  .arrow-right:hover {
+    transform: scale(1.1) rotate(180deg);
+    transition: all 500ms;
+  }
+  .pets__cart button:hover {
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+  .pets__cart:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(111, 111, 112, 0.6039215686);
+    transition: all 1000ms;
+  }
+  .pets__cart:hover button {
+    background: #FDDCC4;
+    transition: all 1000ms;
+  }
+  .pets__button:hover {
+    background: #FDDCC4;
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+  .donation__button:hover {
+    background: #FDDCC4;
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+  .footer__content-link:hover {
+    transform: scale(1.05);
+    transition: all 500ms;
+  }
+}
